@@ -44,11 +44,37 @@
 
 <script>
   function openLink1() {
-    window.location.href = "'intent://show.toast?data={"id_toast":58,"heading":"Проверка","text":"Проверка атаки","image":"","position":"top","duration":3000,"action":"","button_text":""}#Intent;package=ru.vkusvill;component=ru.vkusvill/ru.vkusvill.ui.MainActivity;scheme=action;action=android.intent.action.VIEW;end'";
+    const data = {
+      id_toast: 58,
+      heading: "Проверка",
+      text: "Проверка атаки",
+      image: "",
+      position: "top",
+      duration: 3000,
+      action: "",
+      button_text: ""
+    };
+
+    const url =
+      "intent://show.toast?data=" +
+      encodeURIComponent(JSON.stringify(data)) +
+      "#Intent;package=ru.vkusvill;" +
+      "component=ru.vkusvill/ru.vkusvill.ui.MainActivity;" +
+      "scheme=action;" +
+      "action=android.intent.action.VIEW;end";
+
+    window.location.href = url;
   }
 
   function openLink2() {
-    window.location.href = "'intent://cart.add.abonement#Intent;package=ru.vkusvill;component=ru.vkusvill/ru.vkusvill.ui.MainActivity;scheme=action;action=android.intent.action.VIEW;end'";
+    const url =
+      "intent://cart.add.abonement" +
+      "#Intent;package=ru.vkusvill;" +
+      "component=ru.vkusvill/ru.vkusvill.ui.MainActivity;" +
+      "scheme=action;" +
+      "action=android.intent.action.VIEW;end";
+
+    window.location.href = url;
   }
 </script>
 
