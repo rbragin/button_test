@@ -44,38 +44,9 @@
 
 <script>
   function openLink1() {
-    const data = {
-      id_toast: 58,
-      heading: "Проверка",
-      text: "Проверка атаки",
-      image: "",
-      position: "top",
-      duration: 3000,
-      action: "",
-      button_text: ""
-    };
-
-    const url =
-      "intent://show.toast?data=" +
-      encodeURIComponent(JSON.stringify(data)) +
-      "#Intent;package=ru.vkusvill;" +
-      "component=ru.vkusvill/ru.vkusvill.ui.MainActivity;" +
-      "scheme=action;" +
-      "action=android.intent.action.VIEW;end";
-
-    window.location.href = url;
+    window.location.href = "intent://cart.add.abonement#Intent;package=ru.vkusvill;component=ru.vkusvill/ru.vkusvill.ui.MainActivity;scheme=action;action=android.intent.action.VIEW;end" ;
   }
 
-  function openLink2() {
-    const url =
-      "intent://cart.add.abonement" +
-      "#Intent;package=ru.vkusvill;" +
-      "component=ru.vkusvill/ru.vkusvill.ui.MainActivity;" +
-      "scheme=action;" +
-      "action=android.intent.action.VIEW;end";
-
-    window.location.href = url;
-  }
 </script>
 
 </body>
